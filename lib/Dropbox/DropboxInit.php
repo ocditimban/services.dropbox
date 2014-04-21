@@ -3,10 +3,10 @@ namespace Dropbox;
 
 class DropboxInit {
   const URL = "http://www.dropbox.com/1/oauth2/authorize";
-  const APP_ID = "d78xyghx14zrfhv";
+  const APP_ID = "YOUR_APP_ID";
   const REDIRECT_URL = "http://localhost/dropbox";
   const RESPONSE_TYPE = "code";
-  const SECRET = "xyd8rcw7upbgfm3";
+  const SECRET = "YOUR_SECRET";
 
   public $redirect;
 
@@ -49,7 +49,7 @@ class DropboxInit {
   }
 
   public function getAccountInfo() {
-    $token = 'QcFqM3Ok5KUAAAAAAAACUtISyV2G7LTHKWzuzb3kf2dOdapRL5wVLad2LAjaZhiY';
+    $token = 'YOUR_TOKEN';
     $url = "https://api.dropbox.com/1/account/info";
 
     $curl = curl_init($url . '?access_token=' . $token);
@@ -64,7 +64,7 @@ class DropboxInit {
   }
 
   public function getFileByFolder($folder) {
-    $token = 'QcFqM3Ok5KUAAAAAAAACUtISyV2G7LTHKWzuzb3kf2dOdapRL5wVLad2LAjaZhiY';
+    $token = 'YOUR_TOKEN';
     // https://api.dropbox.com/1/metadata/<root>/<path>
     // $url = 'https://api.dropbox.com/1/metadata/' . $folder;
     $url = 'https://api.dropbox.com/1/metadata/<root>';
